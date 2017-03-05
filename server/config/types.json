@@ -1,0 +1,21 @@
+{
+  "games": {
+    "lol": "League of Legends",
+    "dota2": "DOTA 2"
+  },
+  "gameThreshold": 500,
+  "gameMMR": [
+    1100,
+    1500,
+    2000,
+    2250,
+    2731,
+    3200,
+    3900,
+    4100
+  ],
+  "userMMR": {
+    "lol": "lolMMR",
+    "dota2": "dota2MMR"
+  } 
+}

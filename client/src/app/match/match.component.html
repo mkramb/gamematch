@@ -1,0 +1,40 @@
+<md-card>
+  <form>
+    <div [ngSwitch]="mode">
+      <div *ngSwitchCase="1">
+        <h2>Loading...</h2>
+        <md-progress-bar mode="indeterminate"></md-progress-bar>
+      </div>
+      <div *ngSwitchCase="0">
+          <div class="field">
+            <md-select
+              #selectedGame
+              placeholder="Select a game type"
+            >
+              <md-option *ngFor="let type of api.types" [value]="type.value">
+                {{ type.label }}
+              </md-option>
+            </md-select>
+          </div>
+          <button
+            (click)="onMatch(selectedGame.selected)"
+            md-raised-button
+          >Match me!</button>
+      </div>
+      <div *ngSwitchCase="2">
+        <h2>Matched with</h2>
+        <md-list>
+          <md-list-item>
+            <md-icon md-list-icon>face</md-icon>
+            <p md-line>{{ match.username }}</p>
+          </md-list-item>
+          <md-list-item>
+            <md-icon md-list-icon>content_paste</md-icon>
+            <p md-line>{{ match.mmr }} MMR</p>
+          </md-list-item>
+        </md-list>
+      </div>
+    </div>
+  </form>
+</md-card>
+

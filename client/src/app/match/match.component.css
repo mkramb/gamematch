@@ -1,0 +1,12 @@
+:host {
+  display: block;
+}
+
+form {
+  padding: 40px;
+}
+
+.field {
+  display: block;
+  margin-bottom: 20px;
+}

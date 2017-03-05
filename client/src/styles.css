@@ -1,0 +1,6 @@
+@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';
+@import '~normalize.css/normalize.css';
+
+body {
+  background: #efefef;
+}
